@@ -1,0 +1,31 @@
+.bajaux-widget-outer > div.circular-gauge-outer.bajaux-widget {
+  background-color: white;
+  overflow: hidden;
+  height: 200px;
+}
+
+.circular-grid-background {
+  fill: #ddd;
+}
+
+.circular-grid line {
+  stroke: #fff;
+}
+
+.circular-grid .circular-minor line {
+  stroke-opacity: .5;
+}
+
+.circular-grid text {
+  display: none;
+}
+
+.circular-axis line {
+  stroke: #000;
+}
+
+.circular-axis path,
+.circular-grid path {
+  display: none;
+}
+

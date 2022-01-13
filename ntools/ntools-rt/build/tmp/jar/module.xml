@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="ntools-rt" bajaVersion="0" vendor="kvg" vendorVersion="0.25" description="Useful Niagara Tools" preferredSymbol="kvg" nre="true" autoload="true" installable="true" buildMillis="1618416354637" buildHost="KYLEGROSSDCC0" moduleName="ntools" runtimeProfile="rt">
+ <dependencies>
+  <dependency name="baja" vendor="Tridium" vendorVersion="4.9"/>
+  <dependency name="alarm-rt" vendor="Tridium" vendorVersion="4.9"/>
+  <dependency name="control-rt" vendor="Tridium" vendorVersion="4.9"/>
+  <dependency name="hierarchy-rt" vendor="Tridium" vendorVersion="4.9"/>
+  <dependency name="gx-rt" vendor="Tridium" vendorVersion="4.9"/>
+  <dependency name="history-rt" vendor="Tridium" vendorVersion="4.9"/>
+  <dependency name="schedule-rt" vendor="Tridium" vendorVersion="4.9"/>
+  <dependency name="neql-rt" vendor="Tridium" vendorVersion="4.9"/>
+  <dependency name="web-rt" vendor="Tridium" vendorVersion="4.9"/>
+  <dependency name="bql-rt" vendor="Tridium" vendorVersion="4.9"/>
+ </dependencies>
+ <dirs/>
+ <types>
+  <type class="com.kvg.ntools.BAddHistories" name="AddHistories"/>
+ </types>
+ <permissions>
+  <niagara-permission-groups type="all"/>
+  <niagara-permission-groups type="workbench"/>
+  <niagara-permission-groups type="station"/>
+ </permissions>
+ <moduleParts>
+  <modulePart name="ntools-ux" runtimeProfile="ux"/>
+ </moduleParts>
+</module>

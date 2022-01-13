@@ -1,0 +1,34 @@
+.bajaux-widget-outer > div.linear-gauge-outer.bajaux-widget {
+  overflow: hidden;
+  height: 200px;
+}
+
+.bajaux-widget-container > .bajaux-widget {
+  overflow: hidden;
+}
+
+.linear-grid-background {
+  fill: #ddd;
+  overflow: hidden;
+}
+
+.linear-grid line {
+  stroke: #fff;
+}
+
+.linear-grid .linear-minor line {
+  stroke-opacity: .5;
+}
+
+.linear-grid text {
+  display: none;
+}
+
+.linear-axis line {
+  stroke: #000;
+}
+
+.linear-axis path,
+.linear-grid path {
+  display: none;
+}

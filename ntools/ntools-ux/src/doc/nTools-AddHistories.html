@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Histories</title>
+</head>
+<body>
+<h3>Add Historiese</h3>
+<ul>
+<li><p>The AddHistories tool can be used to add histories to points based on haystack tagging.</p></li>
+</ul>
+</ul>
+<h4>Getting Started</h4>
+<ul>
+    <li><p>To use this tool, simply copy it into your station, right click and select the Add History Extensions Action.
+        Numeric Interval histories will be added to all numeric points tagged as a sensor, cmd, or sp. numeric
+        points tagged as cmd will also get COV trends with a default change tolerance of 1. Boolean COV trends will be added to all boolean points tagged as a sensor, cmd, or sp.
+    Enum COV trends will be added to all enum points tagged as a sensor, cmd, or sp.</p></li>
+</ul>
+<h4>Status</h4>
+<ul>
+    <li><p>Current Status of the program.</p></li>
+</ul>
+<h4>Histories Last Added</h4>
+<ul>
+    <li><p>Timestamp of the last time the program was successfully ran.</p></li>
+</ul>
+<h4>Number of Histories Generated</h4>
+<ul>
+    <li><p>Count of how many history extensions were added.</p></li>
+</ul>
+<h4>History Name Format</h4>
+<ul>
+    <li><p>The name format used on all history extensions except Numeric COV. </p></li>
+</ul>
+
+<h4>COV History Name Format</h4>
+<ul>
+    <li><p>The name format used on Numeric COV history extensions.</p></li>
+</ul>
+<h4>Number of Numeric Interval Histories</h4>
+<ul>
+    <li><p>This is the number of records to keep for each numeric interval history.</p></li>
+</ul>
+<h4>Collection Interval Numeric Interval Histories</h4>
+<ul>
+    <li><p>This is how often the data is sampled for each numeric interval history.</p></li>
+</ul>
+<h4>Number of Numeric COV Histories</h4>
+<ul>
+    <li><p>This is the number of records to keep for each numeric COV history.</p></li>
+</ul>
+<h4>Change Tolerance Numeric COV Histories</h4>
+<ul>
+    <li><p>This is the default change tolerance value for each numeric COV history.</p></li>
+</ul>
+
+<h4>Number of Boolean COV Histories</h4>
+<ul>
+    <li><p>This is the number of records to keep for each boolean COV history.</p></li>
+</ul>
+
+<h4>Number of Boolean Interval Histories</h4>
+<ul>
+    <li><p>This is the number of records to keep for each boolean interval history. Since we are also doing COV we only need to keep a few of these and can space them out to once every 24 hours (see below).</p></li>
+</ul>
+<h4>Collection Interval Boolean Interval Histories</h4>
+<ul>
+    <li><p>This is how often the data is sampled for each boolean interval history. Since we are aso doing COV we can spread these way out, just to keep recent data if they don't change often.</p></li>
+</ul>
+
+<h4>Number of Enum COV Histories</h4>
+<ul>
+    <li><p>This is the number of records to keep for each enum COV history.</p></li>
+</ul>
+
+<h4>Number of Enum Interval Histories</h4>
+<ul>
+    <li><p>This is the number of records to keep for each enum interval history. Since we are also doing COV we only need to keep a few of these and can space them out to once every 24 hours (see below).</p></li>
+</ul>
+<h4>Collection Interval Enum Interval Histories</h4>
+<ul>
+    <li><p>This is how often the data is sampled for each enum interval history. Since we are aso doing COV we can spread these way out, just to keep recent data if they don't change often.</p></li>
+</ul>
+
+
+
+
+</body>
+</html>

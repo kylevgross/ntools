@@ -1,0 +1,35 @@
+/* Module Build File */
+
+description     = "Useful Niagara Tools"
+ext {
+}
+niagaraModule {
+  moduleName = "ntools"
+  preferredSymbol = "kvg"
+  runtimeProfile = "rt"
+
+  modulePart {
+      name = "ntools-ux"
+      runtimeProfile = "ux"
+  }
+}
+
+dependencies {
+  compile "Tridium:nre:4.9"
+  compile "Tridium:baja:4.9"
+  compile "Tridium:alarm-rt:4.9"
+  compile "Tridium:hierarchy-rt:4.9"
+  compile "Tridium:history-rt:4.9"
+  compile "Tridium:schedule-rt:4.9"
+  compile "Tridium:bql-rt:4.9"
+  compile "Tridium:gx-rt:4.9"
+  compile "Tridium:neql-rt:4.9"
+  compile "Tridium:control-rt:4.9"
+  compile 'Tridium:web-rt:4.9'
+
+}
+
+moduleTestJar {
+  from('srcTest') {
+  }
+}

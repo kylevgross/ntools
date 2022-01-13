@@ -1,0 +1,17 @@
+<!-- Module Include File -->
+<!-- Types -->
+<types>
+  <!-- Type Example:<type name="MyClass" class="com.acme.BMyClass"/> -->
+  <!--com.kvg.ntools.ux-->
+
+  <type class="com.kvg.ntools.ux.BStatusIconWidget" name="StatusIconWidget"></type>
+  <type class="com.kvg.ntools.ux.BStaticIconWidget" name="StaticIconWidget"></type>
+  <type class="com.kvg.ntools.ux.BLinearGauge" name="LinearGauge"></type>
+  <type class="com.kvg.ntools.ux.BCircularGauge" name="CircularGauge"></type>
+  <type class="com.kvg.ntools.ux.BGMapsWidget" name="GmapsWidget"></type>
+  <type name="GMapsWidget" class="com.kvg.ntools.ux.BGMapsWidget"/>
+  <type name="GMapsWidgetBuild" class="com.kvg.ntools.ux.BGMapsWidgetBuild"/>
+
+
+
+</types>
