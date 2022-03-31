@@ -1,9 +1,34 @@
 <permissions>
   <niagara-permission-groups type="all">
     <!-- Insert any global permissions here. -->
-  </niagara-permission-groups>
-  <niagara-permission-groups type="workbench">
-    <!-- Insert any workbench specific permissions here. -->
+    <req-permission>
+      <name>GET_ENVIRONMENT_VARIABLES</name>
+      <purposeKey>get twilio SID</purposeKey>
+    <parameters>
+      <parameter name="variables" value="TWILIO_ACCOUNT_SID,TWILIO_AUTH_TOKEN,TWILIO_REGION,TWILIO_EDGE"/>
+    </parameters>
+  </req-permission>
+    <req-permission>
+      <name>SHUTDOWN_HOOKS</name>
+      <purposeKey>shutdown JVM</purposeKey>
+    </req-permission>
+    <req-permission>
+      <name>REFLECTION</name>
+      <purposeKey>reflection</purposeKey>
+    </req-permission>
+    <req-permission>
+      <name>NETWORK_COMMUNICATION</name>
+      <purposeKey>network comm</purposeKey>
+      <parameters>
+        <parameter name="hosts" value="*"/>
+        <parameter name="ports" value="*"/>
+        <parameter name="proxySelector" value="get"/>
+      </parameters>
+    </req-permission>
+</niagara-permission-groups>
+
+<niagara-permission-groups type="workbench">
+  <!-- Insert any workbench specific permissions here. -->
   </niagara-permission-groups>
   <niagara-permission-groups type="station">
     <!--<req-permission>-->

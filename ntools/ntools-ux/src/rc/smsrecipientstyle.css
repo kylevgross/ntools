@@ -1,0 +1,69 @@
+.tabrow.editing td div:first-of-type,
+.tabrow.closed td div:last-of-type  {
+    display:none;
+}
+
+.tabrow.editing td div:last-of-type,
+.tabrow.closed td div:first-of-type  {
+    display:block;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0px;
+  margin-left: 1px;
+}
+
+div.well{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+table.table td {
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 3px 8px 3px 3px;
+  white-space: nowrap;
+}
+
+tbody tr:nth-child(odd){
+  background-color: #F7F7F7;
+
+}
+
+.icon-icons-x16-add {
+ margin: 5px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.icon-icons-x16-add:hover {
+  background-color: #E8E8E8;
+}
+.icon-icons-x16-delete {
+ margin: 5px;
+        cursor: pointer;
+        padding: 4px;
+
+}
+.icon-icons-x16-delete:hover {
+  background-color: #E8E8E8;
+}
+.icon-icons-x16-save {
+ margin: 5px;
+        cursor: pointer;
+
+}
+.icon-icons-x16-save:hover {
+  background-color: #E8E8E8;
+}
+.icon-icons-x16-edit {
+ margin: 5px;
+        cursor: pointer;
+        padding: 4px;
+
+}
+.icon-icons-x16-edit:hover {
+  background-color: #E8E8E8;
+}

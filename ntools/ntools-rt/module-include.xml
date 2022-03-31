@@ -4,4 +4,7 @@
   <!-- Type Example:<type name="MyClass" class="com.acme.BMyClass"/> -->
   <!--com.kvg.ntools-->
   <type class="com.kvg.ntools.BAddHistories" name="AddHistories"/>
+  <type class="com.kvg.ntools.BSMSRecipient" name="SMSRecipient"/>
+
+
 </types>

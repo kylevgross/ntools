@@ -14,7 +14,10 @@ niagaraModule {
   }
 }
 
+
+
 dependencies {
+  uberjar "com.twilio.sdk:twilio:8.27.1"
   compile "Tridium:nre:4.9"
   compile "Tridium:baja:4.9"
   compile "Tridium:alarm-rt:4.9"
@@ -26,10 +29,15 @@ dependencies {
   compile "Tridium:neql-rt:4.9"
   compile "Tridium:control-rt:4.9"
   compile 'Tridium:web-rt:4.9'
+  compile 'Tridium:email-rt:4.9'
+
 
 }
 
+
+
 moduleTestJar {
   from('srcTest') {
+
   }
 }

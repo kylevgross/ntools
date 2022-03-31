@@ -4,10 +4,7 @@
 package com.kvg.ntools.ux;
 
 import javax.baja.naming.BOrd;
-import javax.baja.sys.BSingleton;
-import javax.baja.sys.Context;
-import javax.baja.sys.Sys;
-import javax.baja.sys.Type;
+import javax.baja.sys.*;
 import javax.baja.web.BIFormFactorMax;
 import javax.baja.web.js.BIJavaScript;
 import javax.baja.web.js.JsInfo;
@@ -39,6 +36,10 @@ public final class BGMapsWidget
   @Override
   public Type getType() { return TYPE; }
   public static final Type TYPE = Sys.loadType(BGMapsWidget.class);
+  public BIcon getIcon() {
+    return BIcon.std("web.png");
+
+  }
 
   public JsInfo getJsInfo(Context cx) { return jsInfo; }
 

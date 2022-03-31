@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module name="ntools-ux" bajaVersion="0" vendor="kvg" vendorVersion="0.25" description="Useful Niagara Tools" preferredSymbol="kvg" nre="true" autoload="true" installable="true" buildMillis="1618416608635" buildHost="KYLEGROSSDCC0" moduleName="ntools" runtimeProfile="ux">
+<module name="ntools-ux" bajaVersion="0" vendor="kvg" vendorVersion="0.30" description="Useful Niagara Tools" preferredSymbol="kvg" nre="true" autoload="true" installable="true" buildMillis="1648663370863" buildHost="KYLEGROSSDCC0" moduleName="ntools" runtimeProfile="ux">
  <dependencies>
-  <dependency name="baja" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="control-rt" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="workbench-wb" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="history-rt" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="schedule-rt" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="web-rt" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="bajaui-wb" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="alarm-rt" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="js-ux" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="hierarchy-rt" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="gx-rt" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="ntools-rt" vendor="kvg" vendorVersion="0.25"/>
-  <dependency name="neql-rt" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="gx-wb" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="bql-rt" vendor="Tridium" vendorVersion="4.9"/>
+  <dependency name="web-rt" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="history-rt" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="control-rt" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="gx-wb" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="baja" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="workbench-wb" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="schedule-rt" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="bql-rt" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="ntools-rt" vendor="kvg" vendorVersion="0.30"/>
+  <dependency name="hierarchy-rt" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="alarm-rt" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="neql-rt" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="gx-rt" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="js-ux" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="email-rt" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="bajaui-wb" vendor="Tridium" vendorVersion="4.10"/>
  </dependencies>
  <dirs/>
  <types>
@@ -23,9 +24,13 @@
   <type class="com.kvg.ntools.ux.BStaticIconWidget" name="StaticIconWidget"/>
   <type class="com.kvg.ntools.ux.BLinearGauge" name="LinearGauge"/>
   <type class="com.kvg.ntools.ux.BCircularGauge" name="CircularGauge"/>
-  <type class="com.kvg.ntools.ux.BGMapsWidget" name="GmapsWidget"/>
-  <type name="GMapsWidget" class="com.kvg.ntools.ux.BGMapsWidget"/>
-  <type name="GMapsWidgetBuild" class="com.kvg.ntools.ux.BGMapsWidgetBuild"/>
+  <type class="com.kvg.ntools.ux.BGMapsWidget" name="GMapsWidget"/>
+  <type class="com.kvg.ntools.ux.BGMapsWidgetBuild" name="GMapsWidgetBuild"/>
+  <type class="com.kvg.ntools.ux.BSMSWidget" name="SMSWidget">
+   <agent>
+    <on type="ntools:SMSRecipient"/>
+   </agent>
+  </type>
  </types>
  <permissions>
   <niagara-permission-groups type="all"/>

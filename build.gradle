@@ -7,7 +7,11 @@ plugins {
   id 'com.tridium.niagara' apply false
   id 'com.tridium.niagara-module' apply false
   id 'com.tridium.niagara-rjs' apply false
+
 }
+
+
+
 
 import com.tridium.gradle.plugins.niagara.task.RunNiagaraTestTask
 
@@ -20,6 +24,8 @@ def getGradleProperty(String propName) {
     System.getProperty(propName) ?: System.getenv(propName)
   }
 }
+
+
 
 ext.niagara_home = getGradleProperty('niagara_home')
 ext.niagara_dev_home = getGradleProperty('niagara_dev_home')

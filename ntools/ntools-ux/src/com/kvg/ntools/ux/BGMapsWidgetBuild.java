@@ -4,6 +4,7 @@
 package com.kvg.ntools.ux;
 
 import javax.baja.naming.BOrd;
+import javax.baja.sys.BIcon;
 import javax.baja.sys.Sys;
 import javax.baja.sys.Type;
 import javax.baja.web.js.BJsBuild;
@@ -26,6 +27,10 @@ public final class BGMapsWidgetBuild
 
   @Override
   public Type getType() { return TYPE; }
+  public BIcon getIcon() {
+    return BIcon.std("web.png");
+
+  }
 
   private BGMapsWidgetBuild(String id, BOrd[] files)
   {

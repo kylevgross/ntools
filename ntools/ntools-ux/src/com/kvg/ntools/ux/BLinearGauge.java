@@ -14,7 +14,7 @@ public final class BLinearGauge extends BSingleton implements BIJavaScript, BIFo
     public static final BLinearGauge INSTANCE = new BLinearGauge();
     public static final Type TYPE = Sys.loadType(BLinearGauge.class);
     private static final JsInfo jsInfo = JsInfo.make(BOrd.make("module://ntools/rc/BLinearGauge.js"));
-
+//test
     private BLinearGauge() {
     }
 

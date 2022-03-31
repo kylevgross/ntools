@@ -1,23 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module name="ntools-rt" bajaVersion="0" vendor="kvg" vendorVersion="0.25" description="Useful Niagara Tools" preferredSymbol="kvg" nre="true" autoload="true" installable="true" buildMillis="1618416354637" buildHost="KYLEGROSSDCC0" moduleName="ntools" runtimeProfile="rt">
+<module name="ntools-rt" bajaVersion="0" vendor="kvg" vendorVersion="0.30" description="Useful Niagara Tools" preferredSymbol="kvg" nre="true" autoload="true" installable="true" buildMillis="1648663352098" buildHost="KYLEGROSSDCC0" moduleName="ntools" runtimeProfile="rt">
  <dependencies>
-  <dependency name="baja" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="alarm-rt" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="control-rt" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="hierarchy-rt" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="gx-rt" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="history-rt" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="schedule-rt" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="neql-rt" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="web-rt" vendor="Tridium" vendorVersion="4.9"/>
-  <dependency name="bql-rt" vendor="Tridium" vendorVersion="4.9"/>
+  <dependency name="history-rt" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="control-rt" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="web-rt" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="hierarchy-rt" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="baja" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="alarm-rt" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="neql-rt" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="gx-rt" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="schedule-rt" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="bql-rt" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="email-rt" vendor="Tridium" vendorVersion="4.10"/>
  </dependencies>
  <dirs/>
  <types>
   <type class="com.kvg.ntools.BAddHistories" name="AddHistories"/>
+  <type class="com.kvg.ntools.BSMSRecipient" name="SMSRecipient"/>
  </types>
  <permissions>
-  <niagara-permission-groups type="all"/>
+  <niagara-permission-groups type="all">
+   <req-permission>
+    <name>GET_ENVIRONMENT_VARIABLES</name>
+    <purposeKey>get twilio SID</purposeKey>
+    <parameters>
+     <parameter name="variables" value="TWILIO_ACCOUNT_SID,TWILIO_AUTH_TOKEN,TWILIO_REGION,TWILIO_EDGE"/>
+    </parameters>
+   </req-permission>
+   <req-permission>
+    <name>SHUTDOWN_HOOKS</name>
+    <purposeKey>shutdown JVM</purposeKey>
+   </req-permission>
+   <req-permission>
+    <name>REFLECTION</name>
+    <purposeKey>reflection</purposeKey>
+   </req-permission>
+   <req-permission>
+    <name>NETWORK_COMMUNICATION</name>
+    <purposeKey>network comm</purposeKey>
+    <parameters>
+     <parameter name="hosts" value="*"/>
+     <parameter name="ports" value="*"/>
+     <parameter name="proxySelector" value="get"/>
+    </parameters>
+   </req-permission>
+  </niagara-permission-groups>
   <niagara-permission-groups type="workbench"/>
   <niagara-permission-groups type="station"/>
  </permissions>

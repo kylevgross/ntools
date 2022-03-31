@@ -3,15 +3,15 @@
 <types>
   <!-- Type Example:<type name="MyClass" class="com.acme.BMyClass"/> -->
   <!--com.kvg.ntools.ux-->
-
-  <type class="com.kvg.ntools.ux.BStatusIconWidget" name="StatusIconWidget"></type>
-  <type class="com.kvg.ntools.ux.BStaticIconWidget" name="StaticIconWidget"></type>
-  <type class="com.kvg.ntools.ux.BLinearGauge" name="LinearGauge"></type>
-  <type class="com.kvg.ntools.ux.BCircularGauge" name="CircularGauge"></type>
-  <type class="com.kvg.ntools.ux.BGMapsWidget" name="GmapsWidget"></type>
-  <type name="GMapsWidget" class="com.kvg.ntools.ux.BGMapsWidget"/>
-  <type name="GMapsWidgetBuild" class="com.kvg.ntools.ux.BGMapsWidgetBuild"/>
-
-
-
+  <type class="com.kvg.ntools.ux.BStatusIconWidget" name="StatusIconWidget"/>
+  <type class="com.kvg.ntools.ux.BStaticIconWidget" name="StaticIconWidget"/>
+  <type class="com.kvg.ntools.ux.BLinearGauge" name="LinearGauge"/>
+  <type class="com.kvg.ntools.ux.BCircularGauge" name="CircularGauge"/>
+  <type class="com.kvg.ntools.ux.BGMapsWidget" name="GMapsWidget"/>
+  <type class="com.kvg.ntools.ux.BGMapsWidgetBuild" name="GMapsWidgetBuild"/>
+  <type class="com.kvg.ntools.ux.BSMSWidget" name="SMSWidget">
+    <agent>
+      <on type="ntools:SMSRecipient"/>
+    </agent>
+  </type>
 </types>

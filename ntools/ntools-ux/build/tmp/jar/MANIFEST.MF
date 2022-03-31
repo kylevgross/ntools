@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Implementation-Version: 0.25
+Implementation-Version: 0.30
 Sealed: true
 Implementation-Vendor: kvg
 
