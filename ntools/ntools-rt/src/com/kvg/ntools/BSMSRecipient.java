@@ -1,5 +1,8 @@
 package com.kvg.ntools;
 
+// 3/31/2022 by Kyle Gross
+// SMS Recipient using twilio
+
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
@@ -54,21 +57,36 @@ import javax.baja.util.Worker;
         defaultValue = "personName:1234567890"
 
 )
+
 @NiagaraProperty(
         name = "accountSid",
         type = "String",
         defaultValue = ""
 
 )
+@NiagaraProperty(
+        name = "apiKey",
+        type = "String",
+        defaultValue = ""
 
+)
 
+@NiagaraProperty(
+        name = "apiSecret",
+        type = "BPassword",
+        defaultValue = "BPassword.DEFAULT"
+
+)
 
 
 public class BSMSRecipient extends BAlarmRecipient implements BIAlarmSource {
 
+
+    //setup some slots without slotomatic
+    public static final Property textFormat = newProperty(0, makeDefaultTextFormat(), BFacets.make("multiLine", BBoolean.make(true)));
 /*+ ------------ BEGIN BAJA AUTO GENERATED CODE ------------ +*/
-/*@ $com.kvg.ntools.BSMSRecipient(2420554016)1.0$ @*/
-/* Generated Tue Mar 29 15:28:10 BOT 2022 by Slot-o-Matic (c) Tridium, Inc. 2012 */
+/*@ $com.kvg.ntools.BSMSRecipient(676336021)1.0$ @*/
+/* Generated Thu Mar 31 12:27:03 BOT 2022 by Slot-o-Matic (c) Tridium, Inc. 2012 */
 
 ////////////////////////////////////////////////////////////////
 // Property "to"
@@ -117,33 +135,64 @@ public class BSMSRecipient extends BAlarmRecipient implements BIAlarmSource {
   public void setAccountSid(String v) { setString(accountSid, v, null); }
 
 ////////////////////////////////////////////////////////////////
+// Property "apiKey"
+////////////////////////////////////////////////////////////////
+  
+  /**
+   * Slot for the {@code apiKey} property.
+   * @see #getApiKey
+   * @see #setApiKey
+   */
+  public static final Property apiKey = newProperty(0, "", null);
+  
+  /**
+   * Get the {@code apiKey} property.
+   * @see #apiKey
+   */
+  public String getApiKey() { return getString(apiKey); }
+  
+  /**
+   * Set the {@code apiKey} property.
+   * @see #apiKey
+   */
+  public void setApiKey(String v) { setString(apiKey, v, null); }
+
+////////////////////////////////////////////////////////////////
+// Property "apiSecret"
+////////////////////////////////////////////////////////////////
+  
+  /**
+   * Slot for the {@code apiSecret} property.
+   * @see #getApiSecret
+   * @see #setApiSecret
+   */
+  public static final Property apiSecret = newProperty(0, BPassword.DEFAULT, null);
+  
+  /**
+   * Get the {@code apiSecret} property.
+   * @see #apiSecret
+   */
+  public BPassword getApiSecret() { return (BPassword)get(apiSecret); }
+  
+  /**
+   * Set the {@code apiSecret} property.
+   * @see #apiSecret
+   */
+  public void setApiSecret(BPassword v) { set(apiSecret, v, null); }
+
+////////////////////////////////////////////////////////////////
 // Type
 ////////////////////////////////////////////////////////////////
-public static final Property authToken = newProperty(0, BPassword.DEFAULT, (BFacets)null);
-    public static final Property textFormat = newProperty(0, makeDefaultTextFormat(), BFacets.make("multiLine", BBoolean.make(true)));
-
-    @Override
+  
+  @Override
   public Type getType() { return TYPE; }
   public static final Type TYPE = Sys.loadType(BSMSRecipient.class);
 
 /*+ ------------ END BAJA AUTO GENERATED CODE -------------- +*/
 
-
-    
-
-
-
     private AlarmSupport support;
 
 
-
-    public BPassword getAuthToken() {
-        return (BPassword)this.get(authToken);
-    }
-
-    public void setAuthToken(BPassword v) {
-        this.set(authToken, v, (Context)null);
-    }
 
 
     public BFormat getTextFormat() {
@@ -154,7 +203,6 @@ public static final Property authToken = newProperty(0, BPassword.DEFAULT, (BFac
         this.set(textFormat, v, (Context)null);
     }
 
-
     public void started() throws Exception {
         System.out.println("started");
     }
@@ -163,7 +211,7 @@ public static final Property authToken = newProperty(0, BPassword.DEFAULT, (BFac
         System.out.println("stopped");
 
     }
-
+    //setup default message
     public static BFormat makeDefaultTextFormat() {
         StringBuilder buf = new StringBuilder();
         buf.append("Site:           %sys().station.stationName%\n");
@@ -178,36 +226,43 @@ public static final Property authToken = newProperty(0, BPassword.DEFAULT, (BFac
         return BFormat.make(buf.toString());
     }
 
-
-
+   //do stuff with the alarm
     public void handleAlarm(BAlarmRecord alarm) {
+        //get the alarm and turn it into the text were going to send out
         String body = BFormat.make(this.getTextFormat().format(alarm)).format(alarm);
+        //get the list of people
         String to = this.getTo();
+        //split into recipients
         String[] recipients = to.split(",", 0);
+        //iterate through each recipient
         for(String toNumber : recipients) {
+            //get rid of everything that's not a number (Name, -, ., :, (), etc.)
             String recipientNumber = toNumber.replaceAll("[^\\d.]", "");
+            // do the "privileged" stuff
             PrivilegedAction action = new PrivilegedAction<Void>() {
                 public Void run() {
-
-                    // privileged code goes here, for example:
-                    Twilio.init(getAccountSid(), getAuthToken().getValue());
+                    //get the SID and auth token
+                    //API_KEY, API_SECRET, ACCOUNT_SID
+                    Twilio.init(getApiKey(), getApiSecret().getValue(), getAccountSid());
                     //System.out.println("sending to " + Arrays.toString(recipients));
+                    // create the message
                     Message message = Message.creator(
+                                    // get recipient number and apped +1
                                     new com.twilio.type.PhoneNumber("+1" + recipientNumber),
+                                    // hard coded from number (this is our number purchased from tilwio)
                                     new com.twilio.type.PhoneNumber("+18336161505"),
+                                    // pass in the body text
                                     body)
                             .create();
-                    System.out.println("Message sent to " + recipientNumber);
+                    //print recipients in app director
+                    System.out.println("SMS message sent to " + recipientNumber);
                     return null; // nothing to return
                 }
-
-
             };
             AccessController.doPrivileged(action);
         }
     }
-
-
+    // send acks?
     public BBoolean ackAlarm(BAlarmRecord alert) {
         try {
             return BBoolean.make(this.support.ackAlarm(alert));
@@ -217,6 +272,7 @@ public static final Property authToken = newProperty(0, BPassword.DEFAULT, (BFac
     }
 
     @Override
+    // set mobile icon
     public BIcon getIcon() {
         return BIcon.std("mobile.png");
 

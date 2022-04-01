@@ -17,6 +17,17 @@ import javax.baja.web.js.JsInfo;
         )}
 )
 public class BSMSWidget extends BSingleton implements BIJavaScript, BIFormFactorMax {
+/*+ ------------ BEGIN BAJA AUTO GENERATED CODE ------------ +*/
+/*@ $com.kvg.ntools.ux.BSMSWidget(3736156076)1.0$ @*/
+/* Generated Thu Mar 31 12:15:08 BOT 2022 by Slot-o-Matic (c) Tridium, Inc. 2012 */
+
+////////////////////////////////////////////////////////////////
+// Type
+////////////////////////////////////////////////////////////////
+  
+
+
+/*+ ------------ END BAJA AUTO GENERATED CODE -------------- +*/
 
     public static final BSMSWidget INSTANCE = new BSMSWidget();
     public static final Type TYPE = Sys.loadType(BSMSWidget.class);

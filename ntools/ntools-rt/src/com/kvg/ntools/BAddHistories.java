@@ -1,5 +1,8 @@
 package com.kvg.ntools;
 
+// 4/13/2020 by Kyle Gross
+// Add history extensions based on Tags
+
 import javax.baja.naming.BOrd;
 import javax.baja.nre.annotations.NiagaraAction;
 import javax.baja.nre.annotations.NiagaraProperty;
@@ -612,14 +615,12 @@ public class BAddHistories extends BComponent {
 /*+ ------------ END BAJA AUTO GENERATED CODE -------------- +*/
 
 
-
+   // do the thing here
     public void doAddHistoryExtensions() {
 
         setStatus("Running");
-
         BComponent comp;
         BHistoryConfig histConfig;
-
         int numberOfHistories = 0;
         BOrd neqlQuery = BOrd.make("neql: (n:type='control:NumericPoint' and sbs:sensor) or (n:type='control:NumericPoint' and sbs:cmd) or (n:type='control:NumericPoint' and hs:sensor) or (n:type='control:NumericPoint' and hs:cmd)  or (n:type='control:NumericWritable' and sbs:sensor) or (n:type='control:NumericWritable' and sbs:cmd) or (n:type='control:NumericWritable' and hs:sensor) or (n:type='control:NumericWritable' and hs:cmd)");
         BQueryResult result = (BQueryResult)neqlQuery.resolve(Sys.getStation()).get();
@@ -627,8 +628,6 @@ public class BAddHistories extends BComponent {
         setStatus("Generating Numeric Interval Histories For Sensors and Outputs");
 
         while(results.hasNext())
-
-
         {
         // found entities with the neql query
             comp = (BComponent)results.next();
@@ -642,24 +641,19 @@ public class BAddHistories extends BComponent {
                 histConfig = (BHistoryConfig)hist.getHistoryConfig();
                 histConfig.setCapacity(BCapacity.makeByRecordCount(getNumberOfNumericIntervalHistoriesForSensorsAndOutputs()));
 
-
                 numberOfHistories++;
             }
-
-
         }
         setStatus("Numeric Histories for Sensors and Outputs Generated");
-
         BComponent comp6;
         BHistoryConfig histConfig6;
         BOrd neqlQuery6 = BOrd.make("neql: (n:type='control:NumericPoint' and sbs:sp) or (n:type='control:NumericPoint' and hs:sp) or (n:type='control:NumericWritable' and sbs:sp) or (n:type='control:NumericWritable' and hs:sp)");
         BQueryResult result6 = (BQueryResult)neqlQuery6.resolve(Sys.getStation()).get();
         CloseableIterator<Entity> results6 = result6.getResults();
+
         setStatus("Generating Numeric Interval Histories for SPs");
 
         while(results6.hasNext())
-
-
         {
             // found entities with the neql query
             comp6 = (BComponent)results6.next();
@@ -673,14 +667,10 @@ public class BAddHistories extends BComponent {
                 histConfig6 = (BHistoryConfig)hist6.getHistoryConfig();
                 histConfig6.setCapacity(BCapacity.makeByRecordCount(getNumberOfNumericIntervalHistoriesForSps()));
 
-
                 numberOfHistories++;
             }
-
-
         }
         setStatus("Numeric Histories for SPs Generated");
-
 
         BComponent comp1;
         BHistoryConfig histConfig1;
@@ -704,10 +694,7 @@ public class BAddHistories extends BComponent {
                 histConfig1.setCapacity(BCapacity.makeByRecordCount(getNumberOfBooleanCOVHistories()));
                 numberOfHistories++;
             }
-
-
         }
-
         setStatus("Boolean COV Histories Generated");
 
         BComponent comp4;
@@ -718,7 +705,6 @@ public class BAddHistories extends BComponent {
         setStatus("Generating Boolean Interval Histories");
 
         while(results4.hasNext())
-
         {
             // found entities with the neql query
             comp4 = (BComponent)results4.next();
@@ -858,11 +844,8 @@ public class BAddHistories extends BComponent {
 
     }
     @Override
-    public BIcon getIcon() {
-        return BIcon.std("history.png");
-    }
-
-        }
+    public BIcon getIcon() {return BIcon.std("history.png");}
+}
 
 
 

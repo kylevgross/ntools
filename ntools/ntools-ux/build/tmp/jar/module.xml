@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module name="ntools-ux" bajaVersion="0" vendor="kvg" vendorVersion="0.30" description="Useful Niagara Tools" preferredSymbol="kvg" nre="true" autoload="true" installable="true" buildMillis="1648663370863" buildHost="KYLEGROSSDCC0" moduleName="ntools" runtimeProfile="ux">
+<module name="ntools-ux" bajaVersion="0" vendor="kvg" vendorVersion="0.30" description="Useful Niagara Tools" preferredSymbol="kvg" nre="true" autoload="true" installable="true" buildMillis="1648747978437" buildHost="KYLEGROSSDCC0" moduleName="ntools" runtimeProfile="ux">
  <dependencies>
   <dependency name="web-rt" vendor="Tridium" vendorVersion="4.10"/>
   <dependency name="history-rt" vendor="Tridium" vendorVersion="4.10"/>
