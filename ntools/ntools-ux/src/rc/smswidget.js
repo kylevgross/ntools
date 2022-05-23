@@ -19,6 +19,7 @@ smsrecipienttemplate) {
 var SMSRecipient = function () {
 Widget.apply(this, arguments);
 subscriberMixIn(this);
+console.log("kvg" + this);
 };
 
 var recipientArray = [];
@@ -84,7 +85,8 @@ var didConfirm = confirm("Are you sure you want to delete this recipient?");
                     }
                     var outString = recipientString.slice(0, -1);
                     console.log(outString)
-                    // write to string on elete
+                    // write to string on delete
+                    console.log("this" + $(this));
                     baja.Ord.make('station:|slot:/Services/AlarmService/SMSRecipient').get().then(function (point) {point.setTo(outString)});
                     return true;
                     } else {
@@ -115,6 +117,7 @@ $("body").on("click",".saveRow",function(SMSRecipient){
             console.log(outString)
             //write to string on save
             baja.Ord.make('station:|slot:/Services/AlarmService/SMSRecipient').get().then(function (point) {point.setTo(outString)});
+
 });
 
 //update when string is changed

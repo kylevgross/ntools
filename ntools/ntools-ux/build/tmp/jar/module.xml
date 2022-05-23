@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module name="ntools-ux" bajaVersion="0" vendor="kvg" vendorVersion="0.30" description="Useful Niagara Tools" preferredSymbol="kvg" nre="true" autoload="true" installable="true" buildMillis="1648747978437" buildHost="KYLEGROSSDCC0" moduleName="ntools" runtimeProfile="ux">
+<module name="ntools-ux" bajaVersion="0" vendor="kvg" vendorVersion="0.30" description="Useful Niagara Tools" preferredSymbol="kvg" nre="true" autoload="true" installable="true" buildMillis="1653338282411" buildHost="KYLEGROSSDCC0" moduleName="ntools" runtimeProfile="ux">
  <dependencies>
-  <dependency name="web-rt" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="history-rt" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="control-rt" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="gx-wb" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="baja" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="workbench-wb" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="schedule-rt" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="bql-rt" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="bajaui-wb" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="web-rt" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="history-rt" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="gx-wb" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="workbench-wb" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="control-rt" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="gx-rt" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="alarm-rt" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="schedule-rt" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="bql-rt" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="baja" vendor="Tridium" vendorVersion="4.11"/>
   <dependency name="ntools-rt" vendor="kvg" vendorVersion="0.30"/>
-  <dependency name="hierarchy-rt" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="alarm-rt" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="neql-rt" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="gx-rt" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="js-ux" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="email-rt" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="bajaui-wb" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="neql-rt" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="hierarchy-rt" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="js-ux" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="email-rt" vendor="Tridium" vendorVersion="4.11"/>
  </dependencies>
  <dirs/>
  <types>

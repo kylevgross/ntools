@@ -18,9 +18,9 @@ define('hbs!nmodule/ntools/rc/PopupTemplate',['Handlebars'], function( Handlebar
 var t = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, helper;
 
-  return "<a target='new' href='javascript:window.top.niagara.env.hyperlink(\""
-    + container.escapeExpression(((helper = (helper = helpers.ord || (depth0 != null ? depth0.ord : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"ord","hash":{},"data":data}) : helper)))
-    + "\");'>"
+  return "<a target='hx' href='"
+    + container.escapeExpression(((helper = (helper = helpers.displayName || (depth0 != null ? depth0.displayName : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"displayName","hash":{},"data":data}) : helper)))
+    + "'>"
     + container.escapeExpression(((helper = (helper = helpers.displayName || (depth0 != null ? depth0.displayName : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"displayName","hash":{},"data":data}) : helper)))
     + "</a>\n<br />\n<br />\n<table border='1'>\n  <tr>\n    <th>"
     + container.escapeExpression(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"name","hash":{},"data":data}) : helper)))

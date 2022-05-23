@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module name="ntools-rt" bajaVersion="0" vendor="kvg" vendorVersion="0.30" description="Useful Niagara Tools" preferredSymbol="kvg" nre="true" autoload="true" installable="true" buildMillis="1648747958761" buildHost="KYLEGROSSDCC0" moduleName="ntools" runtimeProfile="rt">
+<module name="ntools-rt" bajaVersion="0" vendor="kvg" vendorVersion="0.30" description="Useful Niagara Tools" preferredSymbol="kvg" nre="true" autoload="true" installable="true" buildMillis="1653338032765" buildHost="KYLEGROSSDCC0" moduleName="ntools" runtimeProfile="rt">
  <dependencies>
-  <dependency name="history-rt" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="control-rt" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="web-rt" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="hierarchy-rt" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="baja" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="alarm-rt" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="neql-rt" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="gx-rt" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="schedule-rt" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="bql-rt" vendor="Tridium" vendorVersion="4.10"/>
-  <dependency name="email-rt" vendor="Tridium" vendorVersion="4.10"/>
+  <dependency name="history-rt" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="web-rt" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="neql-rt" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="hierarchy-rt" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="control-rt" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="gx-rt" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="alarm-rt" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="schedule-rt" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="bql-rt" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="baja" vendor="Tridium" vendorVersion="4.11"/>
+  <dependency name="email-rt" vendor="Tridium" vendorVersion="4.11"/>
  </dependencies>
  <dirs/>
  <types>
