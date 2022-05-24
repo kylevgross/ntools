@@ -53,7 +53,7 @@ define(['baja!',
     that.properties()
       .add("position", "43.077814,-85.609354")
       .add("zoom", 12)
-      .add("key", "AIzaSyAXEgPoEs_zq9XwI_M4HghSed4ABiluXYQ");
+      .add("key", "");
 
     subscriberMixIn(that);
   };
